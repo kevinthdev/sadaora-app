@@ -19,7 +19,7 @@ git clone https://github.com/kevinthdev/sadaora-app.git
 cd sadaora-app
 ```
 
-### Instructions
+### 2. Instructions
 
 ```bash
 npm install
@@ -50,7 +50,7 @@ To access the application, open the following URL in your browser: http://127.0.
  **Folder Structure**: Keep the backend clean by organizing routes, middlewares, controllers, utils, and types in separate folders.
 
  ## Architectural decisions
-  **Deactive Account**
-  **Error Boundary**
-  **404 Page**
-  **Pagination and Search**
+  - **Deactive Account**
+  - **Error Boundary**
+  - **404 Page**
+  - **Pagination and Search**
