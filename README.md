@@ -49,7 +49,7 @@ To access the application, open the following URL in your browser: http://127.0.
 
  **Folder Structure**: Keep the backend clean by organizing routes, middlewares, controllers, utils, and types in separate folders.
 
- ## Architectural decisions
+ ## Any assumptions made
   - **Deactive Account**
   - **Error Boundary**
   - **404 Page**
