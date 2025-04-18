@@ -1,6 +1,4 @@
 import { Router } from "express";
-import passport from "passport";
-import "../middlewares/passport";
 import {
   createProfile,
   getProfile,
