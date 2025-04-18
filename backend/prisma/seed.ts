@@ -7,6 +7,11 @@ dotenv.config();
 
 const prisma = new PrismaClient();
 
+const stringToBytes = (str:string) => {
+    const encoder = new TextEncoder();
+    return encoder.encode(str);
+}
+
 async function main() {
     const USERS_TO_CREATE : number = parseInt(process.env.USERS_TO_CREATE || '10', 10);
     const PWD_LENGTH : number= 10;
@@ -24,7 +29,7 @@ async function main() {
                         name: faker.person.fullName(),
                         headline: faker.person.jobTitle(),
                         bio: faker.lorem.paragraph(),
-                        photo: undefined,
+                        photo: faker.image.avatar() as string,
                         interests: faker.helpers.arrayElements([
                             'coding',
                             'reading',

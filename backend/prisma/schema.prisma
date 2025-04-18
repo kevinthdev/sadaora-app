@@ -26,7 +26,7 @@ model Profile {
   name      String
   headline  String?
   bio       String?
-  photo     Bytes?     // URL or Cloudinary image
+  photo     String?     // URL or Cloudinary image
   interests String?
   userId    String      @unique
   user      User        @relation(fields: [userId], references: [id])

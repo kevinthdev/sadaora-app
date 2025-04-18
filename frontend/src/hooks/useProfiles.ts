@@ -14,6 +14,9 @@ export const useProfiles = (initialPage: number = 1) => {
       setProfiles(res.data.feed);
       setTotal(res.data.total);
       setLoading(false);
+    }).catch(err => {
+      setLoading(false);
+      console.log("Error: Fetching profiles")
     });
   };
 

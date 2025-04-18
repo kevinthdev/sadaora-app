@@ -15,11 +15,11 @@ const Profile = () => {
   useEffect(() => {
     if (user) {
       setForm({
-        name: user?.name,
-        bio: user?.bio,
-        headline: user?.headline,
-        photo: user?.photo,
-        interests: user?.interests,
+        name: user?.name || "",
+        bio: user?.bio || "",
+        headline: user?.headline || "",
+        photo: user?.photo || "",
+        interests: user?.interests || "",
       });
       setPreviewUrl(user?.photo || null);
     }

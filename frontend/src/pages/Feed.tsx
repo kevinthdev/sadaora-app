@@ -36,7 +36,7 @@ const Feed = () => {
         </div>
       ) : (
         <>
-          <Pagination setPage={setPage} page={page} total={total} />
+          {profiles.length > 0 && <Pagination setPage={setPage} page={page} total={total} />}
           {profiles.map((profile) => (
             <div
               key={profile.id}
@@ -73,7 +73,7 @@ const Feed = () => {
           ))}
         </>
       )}
-      <Pagination setPage={setPage} page={page} total={total} />
+      {profiles.length > 0 && <Pagination setPage={setPage} page={page} total={total} />}
       <UserModal
         isOpen={isOpen}
         profile={profile}
