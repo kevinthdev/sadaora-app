@@ -36,7 +36,9 @@ const Feed = () => {
         </div>
       ) : (
         <>
-          {profiles.length > 0 && <Pagination setPage={setPage} page={page} total={total} />}
+          {profiles.length > 0 && (
+            <Pagination setPage={setPage} page={page} total={total} />
+          )}
           {profiles.map((profile) => (
             <div
               key={profile.id}
@@ -58,14 +60,16 @@ const Feed = () => {
                     {profile.bio}
                   </p>
                   <div className="mt-2 flex flex-wrap gap-2">
-                    {profile.interests?.split(",").map((tag, idx) => (
-                      <span
-                        key={idx}
-                        className="bg-primary text-gray-800 text-xs px-2 py-1 rounded"
-                      >
-                        {tag}
-                      </span>
-                    ))}
+                    {profile.interests?.split(",").map((tag, idx) =>
+                      tag ? (
+                        <span
+                          key={idx}
+                          className="bg-primary text-gray-800 text-xs px-2 py-1 rounded"
+                        >
+                          {tag}
+                        </span>
+                      ) : null
+                    )}
                   </div>
                 </div>
               </div>
@@ -73,7 +77,9 @@ const Feed = () => {
           ))}
         </>
       )}
-      {profiles.length > 0 && <Pagination setPage={setPage} page={page} total={total} />}
+      {profiles.length > 0 && (
+        <Pagination setPage={setPage} page={page} total={total} />
+      )}
       <UserModal
         isOpen={isOpen}
         profile={profile}
