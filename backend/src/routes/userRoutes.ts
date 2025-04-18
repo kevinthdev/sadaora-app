@@ -9,7 +9,6 @@ import {
 import { isAuthenticated } from "../middlewares/authMiddleware";
 import { validate } from "../middlewares/validateMiddleware";
 import {
-  createProfileValidation,
   updateProfileValidation,
   deleteProfileValidation,
   getProfileValidation,
@@ -20,7 +19,7 @@ const router = Router();
 router.post(
   "/profile",
   isAuthenticated,
-  validate(createProfileValidation),
+  validate(updateProfileValidation),
   createProfile
 );
 
