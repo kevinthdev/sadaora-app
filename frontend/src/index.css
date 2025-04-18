@@ -28,6 +28,39 @@ h1 {
   line-height: 1.1;
 }
 
+.error-boundary {
+  text-align: center;
+  padding: 20px;
+  background-color: #f2d7d5;
+  color: #d9534f;
+  border: 1px solid #d9534f;
+  border-radius: 5px;
+}
+
+.error-boundary h2 {
+  font-size: 24px;
+}
+
+.not-found {
+  text-align: center;
+  padding: 50px;
+  background-color: #f8d7da;
+  color: #721c24;
+}
+
+.not-found h1 {
+  font-size: 36px;
+}
+
+.not-found a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.not-found a:hover {
+  text-decoration: underline;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
